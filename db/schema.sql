@@ -36,5 +36,32 @@ DROP TABLE  IF EXISTS authors;
   last_name VARCHAR(255)  NOT NULL,  CONSTRAINT pk_authors PRIMARY KEY(id)
  )
 
- CREATE TABLE music_albums(id INT GENERATED ALWAYS AS IDENTITY, genre_id INT, author_id INT, source_id INT, label_id INT, publish_date DATE, archived BOOLEAN, spotify BOOLEAN)
- CREATE TABLE game(id INT GENERATED ALWAYS AS IDENTITY, genre_id INT, author_id INT, source_id INT, label_id INT, publish_date DATE, archived BOOLEAN, multiplayer BOOLEAN, last_played_at DATE)
+ CREATE TABLE music_albums(id INT GENERATED ALWAYS AS IDENTITY,
+  genre_id INT,
+  author_id INT,
+  source_id INT,
+  label_id INT, 
+  publish_date DATE, 
+  archived BOOLEAN,
+  spotify BOOLEAN,
+  CONSTRAINT pk_albums PRIMARY KEY (id),
+  CONSTRAINT fk_authors FOREIGN KEY (author_id) REFERENCES authors(id),
+  CONSTRAINT fk_genres FOREIGN KEY (genre_id) REFERENCES genres(id),
+  CONSTRAINT fk_label FOREIGN KEY (label_id) REFERENCES labels(id),
+  CONSTRAINT fk_source FOREIGN KEY (source_id) REFERENCES sources(id)
+   )
+ CREATE TABLE game(id INT GENERATED ALWAYS AS IDENTITY,
+  genre_id INT,
+  author_id INT, 
+  source_id INT, 
+  label_id INT, 
+  publish_date DATE, 
+  archived BOOLEAN, 
+  multiplayer BOOLEAN, 
+  last_played_at DATE,
+  CONSTRAINT pk_albums PRIMARY KEY (id),
+  CONSTRAINT fk_authors FOREIGN KEY (author_id) REFERENCES authors(id),
+  CONSTRAINT fk_genres FOREIGN KEY (genre_id) REFERENCES genres(id),
+  CONSTRAINT fk_label FOREIGN KEY (label_id) REFERENCES labels(id),
+  CONSTRAINT fk_source FOREIGN KEY (source_id) REFERENCES sources(id)
+  )
