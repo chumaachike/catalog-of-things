@@ -38,4 +38,15 @@ class Item
     @label = label
     label.add_item(self) unless label.items.includes?(self) # add label to items array  if it is not in the items
   end
+
+  def move_to_archive
+    @archived = true if can_be_archived?
+  end
+
+  private
+
+  def can_be_archived?
+    current_year = Date.today.year
+    current_year - @published_date.year > 10
+  end
 end
