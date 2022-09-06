@@ -35,3 +35,5 @@ DROP TABLE  IF EXISTS authors;
  CREATE TABLE authors (id  INT GENERATED ALWAYS AS IDENTITY, first_name VARCHAR(255) NOT NULL,
   last_name VARCHAR(255)  NOT NULL,  CONSTRAINT pk_authors PRIMARY KEY(id)
  )
+
+ CREATE TABLE music_albums(id INT GENERATED ALWAYS AS IDENTITY, genre_id INT, author_id INT, source_id INT, label_id INT, publish_date DATE, archived BOOLEAN, spotify BOOLEAN)
