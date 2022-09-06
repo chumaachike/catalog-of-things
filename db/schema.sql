@@ -37,3 +37,4 @@ DROP TABLE  IF EXISTS authors;
  )
 
  CREATE TABLE music_albums(id INT GENERATED ALWAYS AS IDENTITY, genre_id INT, author_id INT, source_id INT, label_id INT, publish_date DATE, archived BOOLEAN, spotify BOOLEAN)
+ CREATE TABLE game(id INT GENERATED ALWAYS AS IDENTITY, genre_id INT, author_id INT, source_id INT, label_id INT, publish_date DATE, archived BOOLEAN, multiplayer BOOLEAN, last_played_at DATE)
