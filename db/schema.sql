@@ -14,13 +14,13 @@ CONSTRAINT pk_genres PRIMARY KEY(id)
 
 
   --drop table labels if exists
- DROP TABLe IF exists labels
+ DROP TABLE IF exists labels
  -- create table labels 
    CREATE TABLE labels( id INT GENERATED ALWAYS AS IDENTITY,title VARCHAR(255) NOT NULL,
     color VARCHAR(100) NOT NULL, CONSTRAINT pk_labels PRIMARY KEY(id)
   )
 -- Drop table sources if exists
- DROP TABLe IF exists sources
+ DROP TABLE IF exists sources
  -- create table sources
 
  CREATE TABLE sources( id INT GENERATED ALWAYS AS IDENTITY,
