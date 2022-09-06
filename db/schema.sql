@@ -4,7 +4,7 @@ DROP DATABASE IF EXISTS catalog_of_things;
 CREATE DATABASE catalog_of_things;
 
 
-- Drop table genres if exists 
+-- - Drop table genres if exists 
  DROP TABLE IF EXISTS genres;
 
  -- create table genres 
