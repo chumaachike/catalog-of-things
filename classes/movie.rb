@@ -1,11 +1,10 @@
 require_relative 'item'
 class Movie < Item
-  attr_accessor :silet
+  attr_reader :silent
 
-  def initialize(publish_date, archived: false, silent: false)
-    super(id, publish_date, archived: archived)
+  def initialize(published_date, archived: false, silent: false)
+    super(id, published_date, archived: archived)
     @silent = silent
-    @archived = archived
   end
 
   def move_to_achive

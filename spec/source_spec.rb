@@ -1,4 +1,4 @@
-require_relative '../source'
+require './classes/source'
 describe Source do
   context 'when the Source class is tested ' do
     before(:each) do
