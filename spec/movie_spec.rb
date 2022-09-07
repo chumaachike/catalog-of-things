@@ -1,4 +1,4 @@
-require_relative '../movie'
+require './classes/movie'
 describe Movie do
   context 'When movie class is tested it' do
     before(:each) do
@@ -6,7 +6,7 @@ describe Movie do
     end
 
     it 'should display published date equals to 022-10-06' do
-      expect(@movie.publish_date).to eql '022-10-06'
+      expect(@movie.publish_date).to eql '2022-10-06'
     end
 
     it ' can_be_archived should return true' do
