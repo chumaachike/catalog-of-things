@@ -13,7 +13,6 @@ describe Label do
     expect(@label).to be_an_instance_of Label
   end
 
-
   it 'title should be Dark_Rose' do
     expect(@label.title).to eql 'Dark_Rose'
   end
