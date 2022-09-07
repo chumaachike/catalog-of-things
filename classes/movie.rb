@@ -2,10 +2,9 @@ require_relative 'item'
 class Movie < Item
   attr_accessor :silet
 
-  def initialize(publish_date, archived: false, silet: true)
-    super(id, genre, author, source, label, publish_date, archived)
-    @id = id || Random.rand(0..10_000)
-    @silet = silet
+  def initialize(publish_date, archived: false, silent: false)
+    super(id, publish_date, archived: archived)
+    @silent = silent
     @archived = archived
   end
 
@@ -16,7 +15,8 @@ class Movie < Item
   private
 
   def can_be_archived?
-    current_year = Date.today.year
-    current_year - @published.year > 10
+   return true if super || @silent
+
+   false
   end
 end
