@@ -4,7 +4,7 @@ require_relative 'create'
 class CreateLabel < Create
   def self.add
     puts '---- Add label information -----'
-    puts 'Enter Label Title: '
+    puts 'Ente Label Title: '
     title = gets.chomp.strip
     puts 'Enter Label Color: '
     color = gets.chomp.strip
