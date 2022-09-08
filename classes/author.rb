@@ -13,4 +13,7 @@ class Author
     @items << item
     item.author = self
   end
+  def author_hash
+    {first_name: @first_name, last_name: @last_name, id: @id, item: @items}
+  end
 end

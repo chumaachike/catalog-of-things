@@ -29,10 +29,19 @@ module BooksModule
 
         new_book = Book.new(publisher, published_date, cover_state)
         author = Author.new(f_name, l_name)
-        
-        @books.push(new_book)
-        @authors.push(author)
         author.add_item(new_book)
+        @books.push(new_book.to_hash)
+        @authors.push(author.author_hash)
+
+        book_data = JSON.pretty_generate(@books.map(&:to_hash))
+        author_data = JSON.pretty_generate(@authors.map(&:to_hash))
+
+        store('books', book_data)
+
+        
+
+        JSON.pretty_generate(@books.map)
+        
 
 
 
