@@ -1,4 +1,4 @@
-require './create'
+require_relative 'create'
 require '../classes/author'
 
 class CreateAuthor < Create

@@ -1,5 +1,5 @@
 require '../classes/label'
-require './create'
+require_relative 'create'
 
 class CreateLabel < Create
   def self.add

@@ -1,5 +1,5 @@
 require '../classes/source'
-require './create'
+require_relative 'create'
 
 class CreateSource < Create
   def self.add
