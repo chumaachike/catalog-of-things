@@ -1,4 +1,4 @@
-require_relative 'item'
+# require_relative 'item'
 class Source
   attr_accessor :name
   attr_reader :items, :id
@@ -10,7 +10,7 @@ class Source
   end
 
   def add_item(item)
-    @items.push(item)
+    @items << item
     item.source = self
   end
 end

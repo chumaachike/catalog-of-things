@@ -17,12 +17,11 @@ class Book < Item
       cover_state: @cover_state,
       published_date: @published_date,
       archived: @archived
+      author_first_name: @author.first_name
+      author_last_name: @author.last_name
 
     }
-    hash[:label] = @label.id unless @label.nil?
-    hash[:source] = @source.id unless @source.nil?
-    hash[:author] = @author.id unless @author.nil?
-    hash[:genre] = @genre.id unless @genre.nil?
+   
   end
 
   def can_be_archived?

@@ -1,8 +1,8 @@
-require_relative './classes/operation'
-require_relative './classes/app'
+# require_relative './classes/operation'
+require_relative 'app'
 
 def main
     app = App.new()
-    display(app)
+    app.display_menu
 end
 main

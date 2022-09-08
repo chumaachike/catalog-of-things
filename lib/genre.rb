@@ -8,6 +8,10 @@ class Genre
     @items = []
   end
 
+  def genre_hash
+    { name: @name}
+  end
+
   def add_item(item)
     @items << item
     item.genre = self
