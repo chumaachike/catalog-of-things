@@ -1,6 +1,7 @@
 require_relative 'list'
 
 class ListMovie < List
+  # rubocop:disable Metrics/CyclomaticComplexity
   def self.display(movies)
     puts 'No movie available' if movies.empty?
     movies.each do |movie|
@@ -9,7 +10,9 @@ class ListMovie < List
       source = movie.source.name || 'No source'
       genre = movie.genre.name || 'No genre'
       author = movie.author.first_name || 'No author'
-      puts "movie id:#{movie.id}\t,label: #{label} \n source: #{source}\t genre: #{genre} \t author: #{author} \n published date : #{movie.published_date} \n  archvied status : #{movie_status}"
+      puts "movie id:#{movie.id}\t,label: #{label} \n source: #{source}\t genre: #{genre} \t"
+      puts "author: #{author} \n published date : #{movie.published_date} \n  archvied status : #{movie_status}"
     end
   end
+  # rubocop:enable Metrics/CyclomaticComplexity
 end
