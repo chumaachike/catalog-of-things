@@ -1,4 +1,4 @@
-require_relative 'app'
+require_relative 'helpers/app'
 
 def start
   app = App.new
