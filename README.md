@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-[Netlify Live Demo Link]()
+[Zoom Link](https://drive.google.com/file/d/1dF1iKmK0LAE-8cjJ3KiQCzaP99gX8eKZ/view?usp=sharing)
 
 ## Getting Started
 
@@ -81,7 +81,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Special acknowledgment to [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) whose original [design](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)) inspired the production of this App
+- Every team member who contributed to this project
 
 
 ## 📝 License
