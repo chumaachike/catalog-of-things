@@ -81,7 +81,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Every team member who contributed to this project
+- Aknowledgement goes to every team member who contributed to this project
 
 
 ## 📝 License
