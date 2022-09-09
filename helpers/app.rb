@@ -11,7 +11,7 @@ require_relative 'display/list_genre'
 require_relative 'display/list_label'
 require_relative 'display/list_source'
 require_relative 'display/list_author'
-# require_relative 'preserve/storage'
+require_relative 'preserve/storage'
 require_relative '../options/list_add_option'
 
 class App
