@@ -1,4 +1,4 @@
-require './classes/item'
+require_relative '../helpers/lib/item'
 
 describe Item do
   context 'Test Item' do

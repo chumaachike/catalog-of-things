@@ -1,4 +1,4 @@
-require '../classes/source'
+require_relative '../lib/source'
 require_relative 'create'
 
 class CreateSource < Create
@@ -9,5 +9,11 @@ class CreateSource < Create
     source = Source.new(name)
     puts 'Source created seccussfuly' unless source.nil?
     source
+  end
+
+  def self.create_object(sources)
+    sources.map do |source|
+      Source.new(source['name'], id: source['id'])
+    end
   end
 end

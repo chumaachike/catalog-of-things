@@ -1,5 +1,5 @@
 require_relative 'create'
-require '../classes/author'
+require_relative '../lib/author'
 
 class CreateAuthor < Create
   def self.add
@@ -13,5 +13,11 @@ class CreateAuthor < Create
     puts 'Author created seccussfuly' unless author.nil?
 
     author
+  end
+
+  def self.create_object(authors)
+    authors.map do |author|
+      Author.new(author['first_name'], author['last_name'], id: author['id'])
+    end
   end
 end

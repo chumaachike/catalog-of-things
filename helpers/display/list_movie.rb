@@ -6,11 +6,10 @@ class ListMovie < List
     movies.each do |movie|
       movie_status = movie.archived ? 'Archived' : 'Not Archived'
       label = movie.label.title
-      source = movie.source.name
-      genre = movie.genre.name
       author = movie.author.first_name
-      puts "Movie id: #{movie.id}, label: #{label}, source: #{source}, genre: #{genre}"
-      puts "Author: #{author}, published date : #{movie.published_date}, archvied status: #{movie_status}"
+      source = movie.source.name
+      puts "Movie id: #{movie.id}, published date : #{movie.published_date}, archvied status: #{movie_status}"
+      puts "label: #{label}, author: #{author},soucrce: #{source} "
     end
   end
 end

@@ -1,4 +1,4 @@
-require './classes/label'
+require_relative '../helpers/lib/label'
 describe Label do
   context 'when testing the label class' do
     before(:each) do

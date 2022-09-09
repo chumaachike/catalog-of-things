@@ -1,4 +1,4 @@
-require '../classes/label'
+require_relative '../lib/label'
 require_relative 'create'
 
 class CreateLabel < Create
@@ -11,5 +11,11 @@ class CreateLabel < Create
     label = Label.new(title, color)
     puts 'Label created seccussfuly' unless label.nil?
     label
+  end
+
+  def self.create_object(labels)
+    labels.map do |label|
+      Label.new(label['title'], label['color'], id: label['id'])
+    end
   end
 end

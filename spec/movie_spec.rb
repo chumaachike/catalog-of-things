@@ -1,4 +1,4 @@
-require './classes/movie'
+require_relative '../helpers/lib/movie'
 
 describe Movie do
   context 'initialize movie' do
