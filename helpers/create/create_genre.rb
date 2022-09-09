@@ -1,5 +1,5 @@
 require_relative 'create'
-require '../classes/genre'
+require_relative '../lib/genre'
 
 class CreateGenre < Create
   def self.add
@@ -13,7 +13,7 @@ class CreateGenre < Create
 
   def self.create_object(genres)
     genres.map do |genre|
-      Genre.new(genre[:name], id: genre[:id])
+      Genre.new(genre['name'], id: genre['id'])
     end
   end
 end

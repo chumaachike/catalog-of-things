@@ -1,5 +1,5 @@
 require_relative 'create'
-require '../classes/book'
+require_relative '../lib/game'
 require_relative 'create_genre'
 require_relative 'create_label'
 require_relative 'create_source'
@@ -29,15 +29,15 @@ class CreateGame < Create
 
   def self.create_object(games, authors, labels, genres, sources)
     games.map do |game|
-      new_game = Game.new(game[:multiplayer], game[:last_played],
-                          game[:published_date], archived: game[:archived], id: game[:id])
-      label = labels.find { |l| l.id == game[:label_id] }
+      new_game = Game.new(game['multiplayer'], game['last_played'],
+                          game['published_date'], archived: game['archived'], id: game['id'])
+      label = labels.find { |l| l.id == game['label_id'] }
       new_game.label = label
-      source = sources.find { |s| s.id == game[:source_id] }
+      source = sources.find { |s| s.id == game['source_id'] }
       new_game.source = source
-      genre = genres.find { |g| g.id == game[:genre_id] }
+      genre = genres.find { |g| g.id == game['genre_id'] }
       new_game.genre = genre
-      author = authors.find { |au| au.id == game[:author_id] }
+      author = authors.find { |au| au.id == game['author_id'] }
       new_game.author = author
       new_game
     end
